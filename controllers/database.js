@@ -7,8 +7,10 @@ const db = knex({
     // user: "gueuvzrfsxfirf",
     // password: "",
     // database: "face-detection",
-    host: "process.env.DATABASE_URL",
-    ssl: true,
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
 });
 
