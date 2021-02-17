@@ -47,6 +47,6 @@ app.post("/imageurl", (req, res) => {
   handleApiCall(req, res);
 });
 
-app.listen(3500, () => {
-  console.log("Server running at 3500");
+app.listen(process.env.PORT || 3500, () => {
+  console.log(`Server running at ${process.env.PORT}`);
 });
