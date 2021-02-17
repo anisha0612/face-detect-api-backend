@@ -10,8 +10,8 @@ import db from "./controllers/database.js";
 const app = express();
 app.use(express.json());
 
-var whitelist = ["https://arcane-coast-96493.herokuapp.com/"];
-var corsOptions = {
+const whitelist = ["https://arcane-coast-96493.herokuapp.com/"];
+const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
