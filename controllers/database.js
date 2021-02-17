@@ -3,10 +3,12 @@ import knex from "knex";
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "anishapotteti",
-    password: "",
-    database: "face-detection",
+    // host: "postgresql-crystalline-57450",
+    // user: "gueuvzrfsxfirf",
+    // password: "",
+    // database: "face-detection",
+    host: "process.env.DATABASE_URL",
+    ssl: true,
   },
 });
 
