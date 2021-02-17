@@ -24,6 +24,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   // res.json("database");
   res.send(db.users);
 });
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 app
   .route("/signin")
   .get((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.json("sign in page");
   })
   .post((req, res) => {
@@ -40,6 +42,7 @@ app
 app
   .route("/register")
   .get((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.json("register page");
   })
   .post((req, res) => {
