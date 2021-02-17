@@ -10,18 +10,7 @@ import db from "./controllers/database.js";
 const app = express();
 app.use(express.json());
 
-const whitelist = ["https://arcane-coast-96493.herokuapp.com/"];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
