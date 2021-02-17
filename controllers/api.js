@@ -2,7 +2,7 @@ import Clarifai from "clarifai";
 import dotenv from "dotenv";
 dotenv.config();
 
-const app = new Clarifai.App({ apiKey: process.env.REACT_APP_API_KEY });
+const app = new Clarifai.App({ apikey: process.env.REACT_APP_API_KEY });
 
 const handleApiCall = (req, res) => {
   app.models
